@@ -1,0 +1,16 @@
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+.item-1 {
+    background-color: blue;
+}
+.item-2 {
+    background-color: brown;
+}
+.item-3 {
+    background-color: coral;
+}
