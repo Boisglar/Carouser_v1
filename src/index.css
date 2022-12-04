@@ -1,4 +1,7 @@
 .wrapper {
-    width: 900px;
+    box-sizing: border-box;
     margin: auto;
+    max-width: 1300px;
+    height: 800px;
+    background-color: antiquewhite;
 }

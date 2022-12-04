@@ -3,17 +3,20 @@ import{ FaChevronLeft, FaChevronRight} from "react-icons/fa"
 
 import "./Carousel.css"
 
-const PAGE_WIDTH = 450
+const PAGE_WIDTH = 900
 
 export const Carousel = ({ children })  => {
     const[ pages, setPages] = useState([])
-    const [offset, setOffSet] = useState(0)
+    const [ offset, setOffSet ] = useState(0)
 
     const handeleLefArrowClick = () => {
 
         setOffSet((currentOffSet)=> {
             const newOffset = currentOffSet + PAGE_WIDTH
-            return Math.min(newOffset, 0)
+             return Math.min(newOffset, 0)
+           
+    
+            
         })
     };
      
@@ -21,7 +24,9 @@ export const Carousel = ({ children })  => {
 
         setOffSet((currentOffSet) => {
             const newOffset = currentOffSet - PAGE_WIDTH
-            return Math.max(newOffset, -900 )
+             return Math.max(newOffset, -1800 )
+             
+           
          }) 
     }
 
@@ -31,7 +36,7 @@ export const Carousel = ({ children })  => {
             Children.map(children, (child)=>{
                 return cloneElement(child, {
                     style: {
-                        height:"100%",
+                        height:"500px",
                         minWidth:`${PAGE_WIDTH}px`,
                         maxWidth:`${PAGE_WIDTH}px`,
                     },
